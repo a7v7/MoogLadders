@@ -62,6 +62,7 @@ public:
 		memset(state, 0, sizeof(state));
 		SetCutoff(1000.0f);
 		SetResonance(0.10f);
+		output = 0.0;
 	}
 	
 	virtual ~StilsonMoog()
