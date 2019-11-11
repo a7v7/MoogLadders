@@ -43,3 +43,5 @@ DerivedData
 *.reapeaks
 
 local_ignore/
+/MoogLadders.vcxproj/.vs/MoogLadders/v16/Browse.VC.db
+/MoogLadders.vcxproj/.vs/MoogLadders/v16/Browse.VC.opendb

@@ -34,7 +34,7 @@ int main()
 	std::vector<float> noiseSamples = gen.produce(NoiseGenerator::NoiseType::WHITE, desiredSampleRate, desiredChannelCount, 3.0);
 	
 	StilsonMoog stilsonModel(desiredSampleRate);
-	stilsonModel.Process(noiseSamples.data(), noiseSamples.size());
+	//stilsonModel.Process(noiseSamples.data(), noiseSamples.size());
 	
 	SimplifiedMoog simplifiedModel(desiredSampleRate);
 	//simplifiedModel.Process(noiseSamples.data(), noiseSamples.size());
@@ -58,7 +58,7 @@ int main()
 	//rkModel.Process(noiseSamples.data(), noiseSamples.size());
 	
 	OberheimVariationMoog oberheimModel(desiredSampleRate);
-	//oberheimModel.Process(noiseSamples.data(), noiseSamples.size());
+	oberheimModel.Process(noiseSamples.data(), noiseSamples.size());
 	
 	device.Play(noiseSamples);
 	
