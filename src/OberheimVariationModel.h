@@ -73,8 +73,8 @@ public:
 		saturation = 1.0;
 		Q = 3.0;
 		
-		SetCutoff(1000.f);
 		SetResonance(0.1f);
+		SetCutoff(1000.f);
 	}
 	
 	virtual ~OberheimVariationMoog()
