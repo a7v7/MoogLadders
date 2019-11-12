@@ -120,10 +120,10 @@ public:
 	}
 	
 	virtual void SetResonance(float r) override
-        {
-             // this maps resonance = 1->10 to K = 0 -> 4
-             K = (4.0) * (r - 1.0)/(10.0 - 1.0);
-        }
+    {
+		// this maps resonance = 1->10 to K = 0 -> 4
+		K = (4.0) * (r - 1.0)/(10.0 - 1.0);
+    }
 
 	virtual void SetCutoff(float c) override
 	{
