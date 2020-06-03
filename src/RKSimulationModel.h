@@ -78,8 +78,8 @@ public:
 		
 		stepSize = 1.0 / (oversampleFactor * sampleRate);
 		
-		SetCutoff(1000.f);
-		SetResonance(1.0f);
+		SetCutoff(2000.f);
+		SetResonance(4.0f);
 	}
 	
 	virtual ~RKSimulationMoog()

@@ -55,10 +55,10 @@ int main()
 	//aaronModel.Process(noiseSamples.data(), noiseSamples.size());
 
 	RKSimulationMoog rkModel(desiredSampleRate);
-	//rkModel.Process(noiseSamples.data(), noiseSamples.size());
+	rkModel.Process(noiseSamples.data(), noiseSamples.size());
 	
 	OberheimVariationMoog oberheimModel(desiredSampleRate);
-	oberheimModel.Process(noiseSamples.data(), noiseSamples.size());
+	//oberheimModel.Process(noiseSamples.data(), noiseSamples.size());
 	
 	device.Play(noiseSamples);
 	

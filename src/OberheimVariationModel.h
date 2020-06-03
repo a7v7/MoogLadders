@@ -73,8 +73,8 @@ public:
 		saturation = 1.0;
 		Q = 3.0;
 		
-		SetResonance(0.1f);
-		SetCutoff(1000.f);
+		SetResonance(10.0);
+		SetCutoff(1000.0);
 	}
 	
 	virtual ~OberheimVariationMoog()
@@ -112,9 +112,9 @@ public:
 			// Oberheim variations
 			samples[s] =
 				oberheimCoefs[0] * u +
-				oberheimCoefs[1] * stage1 +
+				oberheimCoefs[1] * stage1 -
 				oberheimCoefs[2] * stage2 +
-				oberheimCoefs[3] * stage3 +
+				oberheimCoefs[3] * stage3 -
 				oberheimCoefs[4] * stage4;
 		}
 	}
@@ -152,11 +152,11 @@ public:
 		alpha0 = 1.0 / (1.0 + K * gamma);
 		
 		// Oberheim variations / LPF4
-		oberheimCoefs[0] = 0.0;
-		oberheimCoefs[1] = 0.0;
-		oberheimCoefs[2] = 0.0;
-		oberheimCoefs[3] = 0.0;
-		oberheimCoefs[4] = 1.0;
+		oberheimCoefs[0] = 0.0;			//	first stage
+		oberheimCoefs[1] = 0.0;			//	a
+		oberheimCoefs[2] = 0.0;			//	b
+		oberheimCoefs[3] = 0.0;			//	c
+		oberheimCoefs[4] = 1.0;			//	d
 	}
 	
 private:
